@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="stle.css">
+  <style>
+  
+</style>
+</head>
+<body>
+<section>
+<div>
+    <h1>Temperature Converter</h1>
+  <br>
+  <input type="number" name="" placeholder="Enter Farenheit Degree" 
+  id="fd"> 
+  <button onclick="changeDeg()"> Change to Celcius </button>
+  <input type="text" name="" placeholder="Degree in Celcius"
+  id="cd" >
+
+</div>
+</section>
+
+<script>  
+  const changeDeg = () =>{
+    const fv = document.getElementById('fd').value;
+
+    // T(°C) = (T(°F) - 32) × 5/9
+
+    let newcv = (fv - 32) * 5/9;
+
+    console.log(newcv);
+
+    document.getElementById('cd').value = newcv+"* cel";
+  }
+</script>
+</body>
+</html>
+
+
